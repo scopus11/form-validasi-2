@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        .invalid {
+            border-color: red;
+        }
+        .valid {
+            border-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Validation</h2>
+    <form id="form">
+        <!-- Nama Pelanggan -->
+        <label for="nama">Nama Pelanggan:</label><br>
+        <input type="text" id="nama" name="nama"><br>
+        <span class="error" id="namaError"></span><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <span class="error" id="emailError"></span><br>
+
+        <!-- Jam Keberangkatan -->
+        <label for="berangkat">Jam Keberangkatan:</label><br>
+        <input type="text" id="berangkat" name="berangkat" placeholder="HH.MM"><br>
+        <span class="error" id="berangkatError"></span><br>
+
+        <!-- Tujuan Keberangkatan -->
+        <label for="tujuan">Tujuan Keberangkatan:</label><br>
+        <input type="text" id="tujuan" name="tujuan"><br>
+        <span class="error" id="tujuanError"></span><br>
+
+        <!-- Jumlah Tiket -->
+        <label for="tiketCount">Jumlah Tiket:</label><br>
+        <input type="number" id="tiketCount" name="tiketCount" min="1" max="10"><br>
+        <span class="error" id="tiketError"></span><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>Data Form:</h3>
+    <div id="result"></div>
+
+    <script src="validation.js"></script>
+</body>
+</html>
